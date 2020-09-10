@@ -1,8 +1,8 @@
-module.exports = {
+module.exports = ctx => ({
   title: 'hihaoki',
   description: 'Just playing around',
-  head:[
-    // ['link', { rel: 'icon', href: `/logo.png` }],
+  head: [
+    ['link', { rel: 'icon', href: `/favicon.ico` }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -16,24 +16,27 @@ module.exports = {
     lineNumbers: true
   },
   themeConfig: {
+    // editLinks: true,
+    // docsDir: 'docs',
+    // smoothScroll: true,
+    logo: '/logo.png',
+    sidebarDepth: 2,
     nav: [
-      { text: '首页', link: '/' },
+      // { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
       {
         text: '语言',
         ariaLabel: 'Language Menu',
         items: [
-          { text: 'Chinese', link: '/language/chinese/' }
+          { text: 'Chinese', link: '/' }
         ]
       }
     ],
-    // sidebar: [
-    //   '/',
-    //   '/guide',
-    //   ['/page-b', 'Explicit link text']
-    // ],
-    sidebar: 'auto',
-    // displayAllHeaders: true // 默认值：false,
+    sidebar: {
+      '/guide/': getGuideSidebar('指南', '进阶')
+    },
+    // sidebar: 'auto',
+    displayAllHeaders: true, // 默认值：false,
     // activeHeaderLinks: false, // 默认值：true,
     lastUpdated: true, //'Last Updated'    string | boolean
     // 默认值是 true 。设置为 false 来禁用所有页面的 下一篇 链接
@@ -42,4 +45,35 @@ module.exports = {
     // prevLinks: false
     smoothScroll: true
   }
+})
+
+
+function getGuideSidebar (groupA, groupB) {
+  return [
+    {
+      title: groupA,
+      collapsable: true,
+      children: [
+        '',
+        'getting-started'
+        // 'directory-structure',
+        // 'basic-config',
+        // 'assets',
+        // 'markdown',
+        // 'using-vue',
+        // 'i18n',
+        // 'deploy'
+      ]
+    },
+    {
+      title: groupB,
+      collapsable: false,
+      children: [
+        // 'frontmatter',
+        // 'permalinks',
+        // 'markdown-slot',
+        // 'global-computed'
+      ]
+    }
+  ]
 }
