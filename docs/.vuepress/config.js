@@ -43,8 +43,8 @@ module.exports = ctx => ({
           title: '后端服务设计',
           collapsable: false,
           children: [
-            'server',
-            'server/choosing-technology'
+            'server'
+            // 'server/choosing-technology'
           ]
         },
         {
