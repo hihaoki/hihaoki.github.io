@@ -22,8 +22,9 @@ module.exports = ctx => ({
     logo: '/logo.png',
     sidebarDepth: 2,
     nav: [
-      // { text: '首页', link: '/' },
+      { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
+      { text: '小蜜蜂课堂', link: '/tinybee-ke/' },
       {
         text: '语言',
         ariaLabel: 'Language Menu',
@@ -33,7 +34,30 @@ module.exports = ctx => ({
       }
     ],
     sidebar: {
-      '/guide/': getGuideSidebar('指南', '进阶')
+      '/guide/': getGuideSidebar('指南', '进阶'),
+      '/tinybee-ke/': [
+        'quick-start',
+        'model-design',
+        'db-design',
+        {
+          title: '后端服务设计',
+          collapsable: false,
+          children: [
+            'server',
+            'server/choosing-technology'
+          ]
+        },
+        {
+          title: '前端设计',
+          collapsable: false,
+          children: []
+        },
+        {
+          title: '服务申请(三方)',
+          collapsable: false,
+          children: []
+        }
+      ]
     },
     // sidebar: 'auto',
     displayAllHeaders: true, // 默认值：false,
