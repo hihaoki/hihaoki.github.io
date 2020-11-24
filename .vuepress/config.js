@@ -1,6 +1,6 @@
 module.exports = ctx => ({
-  title: 'hihaoki',
-  description: 'Just playing around',
+  title: '用一个项目构建自己的知识体系',
+  description: '用一个项目构建自己的知识体系',
   head: [
     ['link', { rel: 'icon', href: `/favicon.ico` }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -20,11 +20,12 @@ module.exports = ctx => ({
     // docsDir: 'docs',
     // smoothScroll: true,
     logo: '/logo.png',
-    sidebarDepth: 2,
+    sidebarDepth: 4,
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
       { text: '小蜜蜂课堂', link: '/tinybee-ke/' },
+      { text: '源码阅读', link: '/code-source/' },
       {
         text: '语言',
         ariaLabel: 'Language Menu',
@@ -44,8 +45,8 @@ module.exports = ctx => ({
           collapsable: false,
           path: 'server/',
           children: [
-            ''
-            // 'server/choosing-technology'
+            '',
+            'choosing-technology/'
           ]
         },
         {
@@ -58,7 +59,45 @@ module.exports = ctx => ({
           collapsable: false,
           children: []
         }
-      ]
+      ],
+      '/code-source/': 
+      {
+        title: '源码阅读',
+          collapsable: false,
+          children: [
+            {
+              title: 'mybatis',
+              collapsable: true,
+              // path: '/code-source/mybatis/',
+              sidebarDepth: 3,
+              children: [
+                '.',
+                '/code-source/mybatis/quick-start/'
+              ]
+            },
+            {
+              title: 'spring-framework',
+              collapsable: true,
+              path: '/code-source/spring-framework/',
+              sidebarDepth: 3,
+              children: [
+                '.',
+                'quick-start/'
+              ]
+            },
+            {
+              title: 'netty',
+              collapsable: true,
+              sidebarDepth: 3,
+              path: '/code-source/netty/',
+              children: [
+                '.',
+                'quick-start'
+              ]
+            }
+          ]
+      }
+      
     },
     // sidebar: 'auto',
     displayAllHeaders: true, // 默认值：false,
