@@ -20,7 +20,7 @@ module.exports = {
     // docsDir: 'docs',
     // smoothScroll: true,
     logo: '/logo.png',
-    sidebarDepth: 3,
+    sidebarDepth: 4,
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
@@ -60,41 +60,38 @@ module.exports = {
           children: []
         }
       ],
-      '/code-source/': 
-      {
-        title: '源码阅读',
-          collapsable: false,
-          children: [
-            {
-              title: 'mybatis',
-              collapsable: true,
-              // path: '/code-source/mybatis/',
-              children: [
-                '',
-                '/code-source/mybatis/quick-start/'
-              ]
-            },
-            {
-              title: 'spring-framework',
-              collapsable: true,
-              path: '/code-source/spring-framework/',
-              children: [
-                '.',
-                'quick-start/'
-              ]
-            },
-            {
-              title: 'netty',
-              collapsable: true,
-              path: '/code-source/netty/',
-              children: [
-                '.',
-                'quick-start'
-              ]
-            }
-          ]
-      }
-      
+      '/code-source/':
+        [
+          {
+            title: 'mybatis',
+            collapsable: true,
+            sidebarDepth: 3,
+            children: [
+              'mybatis/',
+              'mybatis/quick-start'
+            ]
+          },
+          {
+            title: 'spring-framework',
+            collapsable: true,
+            sidebarDepth: 3,
+            children: [
+              'spring-framework/',
+              'spring-framework/quick-start'
+            ]
+          },
+          {
+            title: 'netty',
+            collapsable: true,
+            sidebarDepth: 3,
+            children: [
+              'netty/',
+              'netty/quick-start'
+            ]
+          }
+        ]
+
+
     },
     // sidebar: 'auto',
     displayAllHeaders: true, // 默认值：false,
@@ -109,7 +106,7 @@ module.exports = {
 }
 
 
-function getGuideSidebar (groupA, groupB) {
+function getGuideSidebar(groupA, groupB) {
   return [
     {
       title: groupA,
