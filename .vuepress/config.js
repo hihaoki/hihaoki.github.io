@@ -20,7 +20,7 @@ module.exports = ctx => ({
     // docsDir: 'docs',
     // smoothScroll: true,
     logo: '/logo.png',
-    sidebarDepth: 4,
+    sidebarDepth: 6,
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
@@ -36,17 +36,21 @@ module.exports = ctx => ({
     ],
     sidebar: {
       '/guide/': getGuideSidebar('指南', '进阶'),
+      // '': {
+      //   sidebarDepth 
+      // },
       '/tinybee-ke/': [
-        'quick-start',
+        '',
         'model-design',
         'db-design',
         {
+          name: '后端服务设计',
           title: '后端服务设计',
-          collapsable: false,
-          path: 'server/',
+          collapsable: true,
+          sidebarDepth: 3,
           children: [
-            '',
-            'choosing-technology/'
+            ['server/', '概览'],
+            ['server/choosing-technology', '技术选型']
           ]
         },
         {
@@ -71,7 +75,7 @@ module.exports = ctx => ({
               // path: '/code-source/mybatis/',
               sidebarDepth: 3,
               children: [
-                '.',
+                '',
                 '/code-source/mybatis/quick-start/'
               ]
             },
