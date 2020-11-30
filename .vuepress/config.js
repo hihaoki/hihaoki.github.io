@@ -1,4 +1,4 @@
-module.exports = ctx => ({
+module.exports = {
   title: '用一个项目构建自己的知识体系',
   description: '用一个项目构建自己的知识体系',
   head: [
@@ -20,7 +20,7 @@ module.exports = ctx => ({
     // docsDir: 'docs',
     // smoothScroll: true,
     logo: '/logo.png',
-    sidebarDepth: 6,
+    sidebarDepth: 3,
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
@@ -36,9 +36,6 @@ module.exports = ctx => ({
     ],
     sidebar: {
       '/guide/': getGuideSidebar('指南', '进阶'),
-      // '': {
-      //   sidebarDepth 
-      // },
       '/tinybee-ke/': [
         '',
         'model-design',
@@ -47,7 +44,6 @@ module.exports = ctx => ({
           name: '后端服务设计',
           title: '后端服务设计',
           collapsable: true,
-          sidebarDepth: 3,
           children: [
             ['server/', '概览'],
             ['server/choosing-technology', '技术选型']
@@ -73,7 +69,6 @@ module.exports = ctx => ({
               title: 'mybatis',
               collapsable: true,
               // path: '/code-source/mybatis/',
-              sidebarDepth: 3,
               children: [
                 '',
                 '/code-source/mybatis/quick-start/'
@@ -83,7 +78,6 @@ module.exports = ctx => ({
               title: 'spring-framework',
               collapsable: true,
               path: '/code-source/spring-framework/',
-              sidebarDepth: 3,
               children: [
                 '.',
                 'quick-start/'
@@ -92,7 +86,6 @@ module.exports = ctx => ({
             {
               title: 'netty',
               collapsable: true,
-              sidebarDepth: 3,
               path: '/code-source/netty/',
               children: [
                 '.',
@@ -113,7 +106,7 @@ module.exports = ctx => ({
     // prevLinks: false
     smoothScroll: true
   }
-})
+}
 
 
 function getGuideSidebar (groupA, groupB) {
