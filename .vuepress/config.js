@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/',
   title: '用一个项目构建自己的知识体系',
   description: '用一个项目构建自己的知识体系',
   head: [
