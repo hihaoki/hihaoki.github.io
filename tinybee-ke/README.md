@@ -9,6 +9,8 @@
 
 ### 模块
 
+![](/images/tinybee-ke/module-design.png)
+
 ### 开发进度
 
 
