@@ -33,6 +33,11 @@ spring家族包含：
 
 ### 系统实战
 
+访问地址
+* [服务端tinybee-ke-single](https://github.com/hihaoki/tinybee-ke-single)
+* [后台管理前端tinybee-ke-admin-web](https://github.com/hihaoki/tinybee-ke-admin-web) https://github.com/hihaoki/tinybee-ke-admin-web
+* [前台门户前端tinybee-ke-pc-web](https://github.com/hihaoki/tinybee-ke-pc-web) https://github.com/hihaoki/tinybee-ke-pc-web
+
 ::: tip 小蜜蜂课堂
 * 文档
   > [小蜜蜂课堂](/tinybee-ke)
