@@ -16,6 +16,12 @@
 
 ## 项目介绍
 
+### 项目地址
+
+* [服务端tinybee-ke-single](https://github.com/hihaoki/tinybee-ke-single)
+* [后台管理前端tinybee-ke-admin-web](https://github.com/hihaoki/tinybee-ke-admin-web) https://github.com/hihaoki/tinybee-ke-admin-web
+* [前台门户前端tinybee-ke-pc-web](https://github.com/hihaoki/tinybee-ke-pc-web) https://github.com/hihaoki/tinybee-ke-pc-web
+
 ### 项目演示
 
 #### 门户演示
